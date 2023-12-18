@@ -9,7 +9,7 @@ typedef union mat4x4 {
   alignas(16) float data[16];
 } mat4x4;
 
-mat4x4 mat4_mul_sse(mat4x4 m1, mat4x4 m2) {
+mat4x4 mat4x4_mul_sse(mat4x4 m1, mat4x4 m2) {
   mat4x4 out; memset(out, 0, sizeof(mat4x4));
 
   const float *pM1 = m1.data;
